@@ -5,11 +5,27 @@
 }
 
 html {
-	font-size: 10px;
+	font-size: 6px;
+
+	@include screen-sm() {
+		font-size: 7px;
+	}
+
+	@include screen-md() {
+		font-size: 8px;
+	}
+
+	@include screen-lg() {
+		font-size: 9px;
+	}
+
+	@include screen-xl() {
+		font-size: 10px;
+	}
 }
 
 body {
-	font-size: 1.6rem;
+	font-size: 2.4rem;
 	font-family: $font-main;
 	color: $color-text;
 }
@@ -36,4 +52,8 @@ hr {
 
 ::selection {
 
+}
+
+img {
+	max-width: 100%;
 }
