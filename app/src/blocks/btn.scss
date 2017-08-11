@@ -1,0 +1,21 @@
+.btn {
+	font-weight: 700;
+	font-size: 3.6rem;
+	padding: .555555em 2.777777em;
+	color: white;
+	background: $color-main;
+	text-decoration: none;
+	border-radius: .65em;
+	box-shadow: 0 0 .166666em 0 rgba(0, 0, 0, .17);
+	transition: $duration / 2 ease;
+
+	&:hover {
+		box-shadow: 0 0 6px 0 rgba(0, 0, 0, .51);
+		background: darken($color-main, 2%);
+		transition: $duration ease;
+	}
+
+	&:active {
+		box-shadow: 0 0 .166666em 0 rgba(0, 0, 0, .51), inset 0 .1em .277777em 0 rgba(0, 0, 0, .17);
+	}
+}
