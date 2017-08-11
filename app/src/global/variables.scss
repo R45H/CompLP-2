@@ -7,19 +7,18 @@ $point-md: 768px;
 $point-lg: 992px;
 $point-xl: 1200px;
 
-$font-main: sans-serif;
+$font-main: 'exo2', sans-serif;
 
 $duration: .3s;
 
 $path: '../';
 
-%clear {
-	content: '';
-	display: table;
-	width: 100%;
-	clear: both;
-}
 
+/* --------------- */
+/* БАЗОВЫЕ МИКСИНЫ */
+/* --------------- */
+
+// Брейкпоинты
 @mixin screen-sm($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
 		@content;
@@ -43,6 +42,7 @@ $path: '../';
 		@content;
 	}
 }
+// ===========
 
 // Ретина
 @mixin retina() {
@@ -102,3 +102,29 @@ $path: '../';
 		}
 	}
 }
+
+
+/* ============================ */
+/* МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА */
+/* ============================ */
+
+@mixin line($color: white, $space-bot: 50px, $align: center) {
+	color: $color;
+	margin: 0 0 $space-bot;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 15%;
+		height: 1px;
+		background: $color;
+		margin-top: $space-bot;
+
+		@if $align == center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+/* ============================ */
