@@ -1,0 +1,10 @@
+.title {
+	@include line($color: $color-main-dark, $space-bot: .7em, $align: left);
+	font-size: 5.5rem;
+	font-weight: 300;
+	position: relative;
+
+	&_center {
+		@include line($color: $color-main-dark, $space-bot: .7em);
+	}
+}

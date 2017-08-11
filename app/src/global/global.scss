@@ -28,6 +28,7 @@ body {
 	font-size: 2.4rem;
 	font-family: $font-main;
 	color: $color-text;
+	font-weight: 300;
 }
 
 input,
@@ -56,4 +57,13 @@ hr {
 
 img {
 	max-width: 100%;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0 0 1em;
+
+	b {
+		font-weight: 500;
+	}
 }

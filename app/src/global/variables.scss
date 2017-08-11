@@ -1,4 +1,5 @@
 $color-main: #00b5f4;
+$color-main-dark: #004a80;
 $color-text: #4c4c4c;
 $color-webcenter: #e96259;
 
@@ -14,9 +15,34 @@ $duration: .3s;
 $path: '../';
 
 
-/* --------------- */
-/* БАЗОВЫЕ МИКСИНЫ */
-/* --------------- */
+/* ---------------------------- */
+/* МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА */
+/* ---------------------------- */
+
+@mixin line($color: $color-text, $space-bot: 1em, $align: center) {
+	margin: 0 0 $space-bot;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 15%;
+		height: 1px;
+		background: $color;
+		margin-top: $space-bot;
+
+		@if $align == center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+/* ---------------------------- */
+
+
+/* ------------- */
+/* ОБЩИЕ МИКСИНЫ */
+/* ------------- */
 
 // Брейкпоинты
 @mixin screen-sm($direct: 'min') {
@@ -103,28 +129,4 @@ $path: '../';
 	}
 }
 
-
-/* ============================ */
-/* МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА */
-/* ============================ */
-
-@mixin line($color: white, $space-bot: 50px, $align: center) {
-	color: $color;
-	margin: 0 0 $space-bot;
-
-	&::after {
-		content: '';
-		display: block;
-		width: 15%;
-		height: 1px;
-		background: $color;
-		margin-top: $space-bot;
-
-		@if $align == center {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-}
-
-/* ============================ */
+/* ------------- */

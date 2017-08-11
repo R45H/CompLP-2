@@ -1,3 +1,41 @@
 .section {
+	margin: 5em 0;
 
+	&__title-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+		flex-grow: 1;
+
+		&_center {
+			text-align: center;
+		}
+	}
+
+	&__hidden-title {
+		position: absolute;
+		top: 0;
+
+		&_center {
+			left: 50%;
+			transform: translateX(-50%);
+			margin-left: 8%;
+		}
+	}
+
+	&__row {
+		align-items: center;
+		margin-bottom: -1em;
+	}
+
+	&__zigzag {
+		position: absolute;
+		top: 75%;
+		margin: 0;
+		right: 0;
+	}
 }

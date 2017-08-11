@@ -18,14 +18,11 @@
 		left: 50%;
 		transform: translateX(-50%);
 		line-height: .2;
-
-		@include screen-sm(max) {
-			font-size: 10rem;
-		}
 	}
 
 	&__title {
-		@include line();
+		@include line($color: white, $space-bot: 1.5em);
+		color: white;
 		font-size: 3.6rem;
 		font-weight: 400;
 		position: relative;

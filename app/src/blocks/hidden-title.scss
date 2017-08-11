@@ -1,7 +1,26 @@
 .hidden-title {
-	font-size: 16.4rem;
+	font-size: 10rem;
 	font-weight: 700;
-	opacity: .11;
+	opacity: .05;
 	user-select: none;
+	pointer-events: none;
 	cursor: default;
+	line-height: .3;
+
+	@include screen-sm() {
+		font-size: 16.4rem;
+	}
+
+	&_sm {
+		font-size: 8rem;
+		line-height: .85;
+
+		@include screen-sm() {
+			font-size: 10.1rem;
+		}
+	}
+
+	&_strong {
+		opacity: .11;
+	}
 }
