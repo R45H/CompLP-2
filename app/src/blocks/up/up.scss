@@ -1,0 +1,31 @@
+.up {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+
+	.fa {
+		padding: .5em .7em;
+		cursor: pointer;
+		font-size: 6rem;
+		color: white;
+		transition: $duration / 2 ease;
+		text-shadow: 0 0 1px $color-main;
+
+		&::before {
+			position: relative;
+		}
+
+		&:hover {
+			color: $color-main;
+			transition: $duration ease;
+		}
+
+		&:active {
+
+			&::before {
+				top: 3px;
+			}
+		}
+	}
+}
